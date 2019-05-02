@@ -40,9 +40,9 @@ export default function PolymerRedux(store) {
 			.filter(name => {
 				const property = properties[name];
 				if (Object.prototype.hasOwnProperty.call(property, 'statePath')) {
-					if (!property.readOnly && property.notify) {
-						console.warn(`PolymerRedux: <${element.constructor.is}>.${name} has "notify" enabled, two-way bindings goes against Redux's paradigm`);
-					}
+					// if (!property.readOnly && property.notify) {
+					// 	console.warn(`PolymerRedux: <${element.constructor.is}>.${name} has "notify" enabled, two-way bindings goes against Redux's paradigm`);
+					// }
 					return true;
 				}
 				return false;
